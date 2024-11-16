@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapache Gambling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        section h2 {
+            margin: 20px 0 10px;
+        }
+
+        section p {
+            margin: 10px 0 20px;
+            color: #555;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a button {
+            text-decoration: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            section {
+                padding: 10px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Plugin personalizado de jQuery
+        (function ($) {
+            $.fn.fadeSections = function () {
+                this.on('click', function () {
+                    $('section').fadeOut(500).fadeIn(500);
+                });
+                return this;
+            };
+        })(jQuery);
+
+        $(document).ready(function () {
+            // Aplicar el plugin a los botones
+            $('button').fadeSections();
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <h1>NB Casino</h1>
+        <nav>
+            <a href="Sesion.html">Iniciar Sesión</a>
+            <a href="Registro.html">Registrarse</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <section>
+        <img src="https://ejemplo.com/imagen-promocion.jpg" alt="Promoción Principal">
+        <button>Regístrate ahora</button>
+    </section>
+
+    <!-- Secciones adicionales -->
+    <section>
+        <img src="https://t3.ftcdn.net/jpg/04/78/87/22/360_F_478872230_PLSCET4F5qnoTCj112ekqqWo9R3YUsfj.jpg" alt="Casino">
+        <h2>Casino</h2>
+        <p>Explora nuestra amplia selección de juegos de slots.</p>
+        <a href="Casino.html">
+            <button>Ir al Casino</button>
+        </a>
+    </section>
+
+    <section>
+        <img src="https://c4.wallpaperflare.com/wallpaper/399/970/365/neymar-soccer-clubs-fc-barcelona-wallpaper-preview.jpg" alt="Deportes">
+        <h2>Deportes</h2>
+        <p>Apuesta en tus deportes favoritos.</p>
+        <a href="Deportes.html">
+            <button>Ir a Deportes</button>
+        </a>
+    </section>
+
+</body>
+</html>
